@@ -76,7 +76,7 @@ async def process_message(message: types.Message, state: FSMContext):
 
         user_message = data['text']
 
-        await bot.send_message(message.from_user.id, '✅Готово, ожидайте 15 секунд, и HWID будет зарегестрирован.)
+        await bot.send_message(message.from_user.id, '✅Готово, ожидайте 15 секунд, и HWID будет зарегестрирован'.)
 
         buttons = [
 
