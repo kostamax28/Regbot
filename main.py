@@ -58,7 +58,7 @@ async def with_puree(message: types.Message):
 
             await message.reply("✅Осталось совсем чуть чуть.")
 
-            await bot.send_message(message.from_user.id, "**❓ Отправь HWID для регистрации:**")
+            await bot.send_message(message.from_user.id, "❓ Отправь HWID для регистрации:")
 
             await Mydialog.otvet.set()
 
@@ -76,11 +76,11 @@ async def process_message(message: types.Message, state: FSMContext):
 
         user_message = data['text']
 
-        await bot.send_message(message.from_user.id, '✅Готово, ожидайте ответа администрации.')
+        await bot.send_message(message.from_user.id, '✅Готово, ожидайте 15 секунд, и HWID будет зарегестрирован.)
 
         buttons = [
 
-            types.InlineKeyboardButton(text="Открыть чат с юзером.", url=f"tg://resolve?domain={message.from_user.username}")
+            types.InlineKeyboardButton(text="User", url=f"tg://resolve?domain={message.from_user.username}")
 
         ]
 
@@ -88,7 +88,7 @@ async def process_message(message: types.Message, state: FSMContext):
 
         keyboard.add(*buttons)
 
-        await bot.send_message(ADMIN_ID, f'\n🖥{user_message}:{message.from_user.id}\n\n👍Действие: Попытка регистрации\n', reply_markup=keyboard)
+        await bot.send_message(ADMIN_ID, f'\n🖥HWID: {user_message}: ID: {message.from_user.id}\n\n👍Действие: Попытка регистрации\n', reply_markup=keyboard)
 
         
 
@@ -110,7 +110,7 @@ async def without_puree(message: types.Message):
 
             buttons = [
 
-            types.InlineKeyboardButton(text="Открыть чат с юзером.", url=f"tg://resolve?domain={message.from_user.username}")
+            types.InlineKeyboardButton(text="User", url=f"tg://resolve?domain={message.from_user.username}")
 
             ]
 
@@ -118,9 +118,9 @@ async def without_puree(message: types.Message):
 
             keyboard.add(*buttons)
 
-            await bot.send_message(ADMIN_ID, f'\n🖥{message.from_user.id}\n\n👍Действие: Попытка отвязки\n', reply_markup=keyboard)
+            await bot.send_message(ADMIN_ID, f'\n🖥HWID : {message.from_user.id}\n\n👍Действие: Попытка отвязки\n', reply_markup=keyboard)
 
-            await message.reply("✅Готово, ваш запрос на отвязку HWID отправлен администрации.")
+            await message.reply("✅Готово, ожидайте 15 секунд, и HWID будет отвязан.)
 
         else:
 
