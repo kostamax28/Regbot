@@ -1,3 +1,3 @@
-	TOKEN="5568611651:AAELwT3xH2JG_xPZF5QXQa4vvMaha3urRM8" # "" не удалять!
+TOKEN="5568611651:AAELwT3xH2JG_xPZF5QXQa4vvMaha3urRM8" # "" не удалять!
 
 ADMIN_ID= "5403539045" #айди админа "" и # и текст сотрешь и вставишь свой айди
