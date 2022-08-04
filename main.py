@@ -120,7 +120,7 @@ async def without_puree(message: types.Message):
 
             await bot.send_message(ADMIN_ID, f'\n🖥HWID : {message.from_user.id}\n\n👍Действие: Попытка отвязки\n', reply_markup=keyboard)
 
-            await message.reply("✅Готово, ожидайте 15 секунд, и HWID будет отвязан.)
+            await message.reply("✅Готово, ожидайте 15 секунд, и HWID будет отвязан'.)
 
         else:
 
