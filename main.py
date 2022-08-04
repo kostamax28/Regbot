@@ -40,7 +40,7 @@ async def process_start_command(message: types.Message):
 
     keyboard.add(button_2)
 
-    await bot.send_message(message.from_user.id, f"🌟Привет, я бот который поможет тебе зарегистрировать твой HWID в чите Slider\n🆔 Твой айди: {message.from_user.id}", reply_markup=keyboard)
+    await bot.send_message(message.from_user.id, f"🌟Привет, я бот который поможет тебе зарегистрировать твой HWID в чите FireLine\n🆔 Твой айди: {message.from_user.id}", reply_markup=keyboard)
 
 @dp.message_handler(Text(equals="🔗Привязать"))
 
@@ -58,7 +58,7 @@ async def with_puree(message: types.Message):
 
             await message.reply("✅Осталось совсем чуть чуть.")
 
-            await bot.send_message(message.from_user.id, "А теперь отправьте боту HWID, полученный из клиента стандофф 2.")
+            await bot.send_message(message.from_user.id, "**❓ Отправь HWID для регистрации:**")
 
             await Mydialog.otvet.set()
 
